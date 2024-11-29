@@ -27,8 +27,6 @@
 #ifndef __CDEFS_H__
 #define __CDEFS_H__
 
-#include <stdbool.h>
-
 typedef signed char			i8;
 typedef unsigned char		u8;
 typedef signed short int	i16;

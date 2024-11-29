@@ -27,13 +27,19 @@
 #ifndef __CUTILS_H__
 #define __CUTILS_H__
 
-#define ABS(X)		((X) >= 0 ? (X) : (-(X)))
-#define MAX(X, Y)	((X) > (Y) ? (X) : (Y))
-#define MIN(X, Y)	((X) < (Y) ? (X) : (Y))
+#define ABS(X)		    ((X) >= 0 ? (X) : (-(X)))
+#define MAX(X, Y)	    ((X) > (Y) ? (X) : (Y))
+#define MIN(X, Y)	    ((X) < (Y) ? (X) : (Y))
+#define SWAP(X, Y)      int X##_tmp_##Y = (X); \
+                        (X) = (Y); \
+                        (Y) = X##_tmp_##Y
 
+#define SWAP2(X, Y, Z)  (Z) = (X); \
+                        (X) = (Y); \
+                        (Y) = (Z)
 /**
- * Functions that allocate memory on the heap for you
- * You have to free these pointers
+ * Functions that allocate memory on the heap for you.
+ * You have to free these pointers.
  */
 char * h_strcpy(const char * src);
 
